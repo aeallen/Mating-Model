@@ -1,7 +1,7 @@
 README
 
-Filename: 190528_AllDataNoPeriodic_100g500i10m50c
-Directory: /pine/scr/a/e/aeallen/Longleaf/190528_AllDataNoPeriodic_100g500i10m50c
+Filename: 190610_AllDataNoPeriodic_100g500i10m50c
+Directory: /pine/scr/a/e/aeallen/Longleaf/190610_AllDataNoPeriodic_100g500i10m50c
 Data file: /pine/scr/a/e/aeallen/Longleaf/experimental.pickled
 
 Generations: 100
@@ -293,8 +293,8 @@ def scorefxn1(arr_parameters, time):
     expX = simulate_single_experiment1(arr_params_IP, time, 1,SS)
         
     # get index of time points closest
+    idx_closest_time_points = []
     for each_time in times_50constant[0][~np.isnan(times_50constant[0])]:
-        idx_closest_time_points = []
         closest_idx = min(range(len(time)),key = lambda i: abs(time[i] - each_time))
         idx_closest_time_points.append(closest_idx)
         
